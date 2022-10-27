@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(seed_r7_gesture)
-add_executable(seed_r7_gesture gesture.py)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)

@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 
 import sys
-import copy
 import rospy
 import moveit_commander
-import move_base_msgs.msg
 import moveit_msgs.msg
-import geometry_msgs.msg
 
 moveit_commander.roscpp_initialize(sys.argv)
 rospy.init_node('move_seed_bow')
@@ -27,12 +24,14 @@ rarm_values[1] = 0
 rarm_values[2] = 0
 rarm_values[3] = 0
 r_group.set_joint_value_target(rarm_values)
+r_group.set_max_velocity_scaling_factor(1.0)
 
 larm_values[0] = 0
 larm_values[1] = 0
 larm_values[2] = 0
 larm_values[3] = 0
 l_group.set_joint_value_target(larm_values)
+l_group.set_max_velocity_scaling_factor(1.0)
 
 plan3 = r_group.plan()
 plan4 = l_group.plan()
@@ -44,6 +43,7 @@ waist_values[0] = 0
 waist_values[1] = 0.61
 waist_values[2] = 0
 w_group.set_joint_value_target(waist_values)
+w_group.set_max_velocity_scaling_factor(0.4)
 
 plan2 = w_group.plan()
 w_group.go(wait=True)
