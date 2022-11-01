@@ -41,7 +41,7 @@ larm_group.go(wait=True)
 
 # Pick arm up and put it in wave location
 rarm_values[0] = -0.35
-rarm_values[1] = -0.4
+rarm_values[1] = -0.2
 rarm_values[3] = -1.75
 rarm_group.set_joint_value_target(rarm_values)
 
