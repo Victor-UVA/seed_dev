@@ -28,7 +28,5 @@ rarm_group.go(wait=True)
 
 
 
-
-
 # Finish
 moveit_commander.roscpp_shutdown
