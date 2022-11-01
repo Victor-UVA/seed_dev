@@ -24,14 +24,14 @@ rarm_values[1] = 0
 rarm_values[2] = 0
 rarm_values[3] = 0
 r_group.set_joint_value_target(rarm_values)
-r_group.set_max_velocity_scaling_factor(1.0)
+r_group.set_max_velocity_scaling_factor(0.9)
 
 larm_values[0] = 0
 larm_values[1] = 0
 larm_values[2] = 0
 larm_values[3] = 0
 l_group.set_joint_value_target(larm_values)
-l_group.set_max_velocity_scaling_factor(1.0)
+l_group.set_max_velocity_scaling_factor(0.9)
 
 plan3 = r_group.plan()
 plan4 = l_group.plan()
