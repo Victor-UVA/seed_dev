@@ -21,7 +21,7 @@ rarm_values[2] = -0.5
 rarm_values[3] = 0
 
 rarm_group.set_joint_value_target(rarm_values)
-rarm_group.set_max_velocity_scaling_factor(0.7)
+rarm_group.set_max_velocity_scaling_factor(0.4)
 
 plan = rarm_group.plan()
 rarm_group.go(wait=True)
