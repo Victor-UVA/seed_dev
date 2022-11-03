@@ -12,7 +12,7 @@ robot = moveit_commander.RobotCommander
 w_group = moveit_commander.MoveGroupCommander("waist")
 r_group = moveit_commander.MoveGroupCommander("rarm")
 l_group = moveit_commander.MoveGroupCommander("larm")
-trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory)
+trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=10)
 
 rarm_values = r_group.get_current_joint_values()
 larm_values = l_group.get_current_joint_values()
