@@ -24,14 +24,14 @@ rarm_values[1] = 0
 rarm_values[2] = 0
 rarm_values[3] = 0
 r_group.set_joint_value_target(rarm_values)
-r_group.set_max_velocity_scaling_factor(0.9)
+r_group.set_max_velocity_scaling_factor(1)
 
 larm_values[0] = 0
 larm_values[1] = 0
 larm_values[2] = 0
 larm_values[3] = 0
 l_group.set_joint_value_target(larm_values)
-l_group.set_max_velocity_scaling_factor(0.9)
+l_group.set_max_velocity_scaling_factor(1)
 
 plan3 = r_group.plan()
 plan4 = l_group.plan()
@@ -43,7 +43,7 @@ waist_values[0] = 0
 waist_values[1] = 0.61
 waist_values[2] = 0
 w_group.set_joint_value_target(waist_values)
-w_group.set_max_velocity_scaling_factor(0.4)
+w_group.set_max_velocity_scaling_factor(1)
 
 plan2 = w_group.plan()
 w_group.go(wait=True)
