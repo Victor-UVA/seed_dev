@@ -45,9 +45,9 @@ larm_group.go(wait=True)
 
 # Pick arm up and put it in wave location
 rarm_values[0] = -1
-rarm_values[1] = -0.11
-rarm_values[2] = 0.228
-rarm_values[3] = -1.83
+# rarm_values[1] = -0.11
+# rarm_values[2] = 0.228
+rarm_values[3] = -1.6
 rarm_values[7] = 1.5
 rarm_group.set_joint_value_target(rarm_values)
 
@@ -62,41 +62,41 @@ plan4 = rhand_group.plan()
 rhand_group.go(wait=True)
 
 # Wave
-rarm_values[2] = 0.4
+rarm_values[2] = 0.2
 rarm_group.set_joint_value_target(rarm_values)
 
 plan4 = rarm_group.plan()
 rarm_group.go(wait=True)
 
-rarm_values[2] = -0.2
+rarm_values[2] = 0
 rarm_group.set_joint_value_target(rarm_values)
 
 plan5 = rarm_group.plan()
 rarm_group.go(wait=True)
 
-rarm_values[2] = 0.4
+rarm_values[2] = 0.2
 rarm_group.set_joint_value_target(rarm_values)
 
 plan6 = rarm_group.plan()
 rarm_group.go(wait=True)
 
-rarm_values[2] = -0.2
+rarm_values[2] = 0
 rarm_group.set_joint_value_target(rarm_values)
 
 plan7 = rarm_group.plan()
 rarm_group.go(wait=True)
 
-rarm_values[2] = 0.4
-rarm_group.set_joint_value_target(rarm_values)
+# rarm_values[2] = 0.4
+# rarm_group.set_joint_value_target(rarm_values)
 
-plan8 = rarm_group.plan()
-rarm_group.go(wait=True)
+# plan8 = rarm_group.plan()
+# rarm_group.go(wait=True)
 
-rarm_values[2] = -0.2
-rarm_group.set_joint_value_target(rarm_values)
+# rarm_values[2] = -0.2
+# rarm_group.set_joint_value_target(rarm_values)
 
-plan9 = rarm_group.plan()
-rarm_group.go(wait=True)
+# plan9 = rarm_group.plan()
+# rarm_group.go(wait=True)
 
 # Put arms back
 rarm_values[0] = 0
